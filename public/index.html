@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Mhetre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- heder -->
+    <header class="header">
+        <a href="#" class="logo">Developer Rohit</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi, My self</h3>
+            <h1>Rohit Mhetre</h1>
+            <h3>And I'm a <span class="multiple-text"></span> </h3>
+            <p>I'm a Full Stack Web Developer specializing in the MERN stack. With a passion for building dynamic </p>
+            <p>and
+                user-centric web applications, I focus on responsive design and innovative solutions. </p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/rohit-mhetre02"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/rohitmhetre02"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/mr_roya_002/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/RohitMh02665969"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <a href="./IMG/Resume.pdf" class="btn">Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <img src="./IMG/roya.png" alt="">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="./IMG/roya.png" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="headline">About <span>Me</span></h2>
+            <h3>Full Stack Developer</h3>
+            <p>I am an innovative and detail-oriented Full Stack Web Developer with a strong foundation in the MERN
+                stack.
+                Proficient in designing and developing dynamic web applications with a focus on user experience and
+                responsive
+                design. Adept at collaborating in team environments and committed to continuous learning and
+                improvement.
+                Passionate about leveraging technology to solve real-world problems and enhance user engagement.</p>
+            <a href="/about" class="btn">Read More</a>
+        </div>
+    </section>
+
+    <!--service section -->
+    <section class="services" id="services">
+        <h2 class="headline"> My <span>Services</span></h2>
+
+        <div class="services-container">
+            <div class="Services-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Website Design and Developmen</h3>
+                <p>Responsive websites designed with HTML, CSS, JavaScript, and front-end frameworks to ensure a
+                    stunning and seamless experience on all devices.</p>
+                <a href="/services" class="btn">Read More</a>
+            </div>
+
+            <div class="Services-box">
+                <i class="fa-solid fa-code"></i>
+                <h3> UI/UX Design</h3>
+                <p>Intuitive, user-focused designs created with tools like Figma and Adobe XD, ensuring both beauty and
+                    usability.</p>
+                <a href="/services" class="btn">Read More</a>
+            </div>
+
+            <div class="Services-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Application Development</h3>
+                <p>Custom web applications crafted with modern technologies like MERN stack, REST APIs, and cloud
+                    integration to meet your unique needs.</p>
+                <a href="/services" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- projects section -->
+    <section class="projects" id="projects">
+        <h2 class="headline"> Latest <span>Projects</span></h2>
+
+        <div class="projects-container">
+            <div class="projects-box">
+                <img src="./IMG/101.png" alt="">
+                <div class="projects-layer">
+                    <h4>WanderLust Travel</h4>
+                    <p>Developed a dynamic travel listings platform with user reviews, filters, and CRUD operations.
+                        Integrated user authentication and used technologies such as Node.js, Express, MongoDB, EJS,
+                        HTML, CSS, JavaScript, and MVC frameworks.</p>
+                    <a href="/projects"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="projects-box">
+                <img src="./IMG/102.png" alt="">
+                <div class="projects-layer">
+                    <h4>Spotify Clone</h4>
+                    <p>Developed a front-end Spotify clone with playlist creation, media controls, and a responsive
+                        design using HTML, CSS, and JavaScript.</p>
+                    <a href="/projects"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="projects-box">
+                <img src="./IMG/104.png" alt="">
+                <div class="projects-layer">
+                    <h4> Portfolio</h4>
+                    <p>Developed a personal portfolio featuring front-end and back-end projects, focusing on dynamic web
+                        applications and responsive designs.</p>
+                    <a href="/projects"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
+    <section class="contact" id="contact">
+        <h2 class="headline">Contact <span>Me</span></h2>
+
+        <form id="contactForm" action="/send-email">
+            <div class="input-box">
+                <input type="text" id="fullName" placeholder="Full Name">
+                <input type="email" id="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" id="mobile" placeholder="Mobile Number">
+                <input type="text" id="subject" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="message" cols="30" rows="10" placeholder="Your Massage"></textarea>
+            <input type="submit" value="Send Massage" class="btn">
+        </form>
+    </section>
+
+
+    <script>
+        const form = document.getElementById("contactForm");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const fullName = document.getElementById("fullName").value;
+            const email = document.getElementById("email").value;
+            const mobile = document.getElementById("mobile").value;
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value;
+
+            try {
+                const response = await fetch("http://localhost:3000/send-email", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ fullName, email, mobile, subject, message }),
+                });
+
+                if (response.ok) {
+                    alert("Message sent successfully!");
+                    form.reset();
+                } else {
+                    alert("Error sending message.");
+                }
+            } catch (error) {
+                alert("Error connecting to the server.");
+            }
+        });
+    </script>
+
+
+    <!-- footer section -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by @Rohit Mhetre | All Right Reserved</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+    <!-- scroll revers -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- type.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- logic js -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

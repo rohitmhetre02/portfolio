@@ -1,0 +1,316 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(6, 6, 29);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+.other-about {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+}
+
+
+.container h1 {
+    text-align: center;
+    color: #0ef;
+
+}
+
+.container h4 {
+    text-align: center;
+}
+
+.other-about h2 {
+    padding-left: 28%;
+    color: #0ef;
+}
+
+.other-about ul {
+    list-style-type: none;
+    padding-left: 15%;
+}
+
+.other-about li {
+    margin-bottom: 10px;
+    padding-left: 15%;
+
+}
+
+.profile-img {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid #00ffff;
+}
+
+.details {
+    width: 70%;
+    font-size: 1.5rem;
+    padding-left: 15%;
+    line-height: 1.8;
+}
+
+.hobbies,
+.achievements,
+.goals {
+    margin-top: 20px;
+}
+
+.back-icon a {
+    display: inline-flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: #0ef;
+    border-radius: .8rem;
+    transition: .5s ease;
+    margin: 20px;
+}
+
+.back-icon a:hover {
+    box-shadow: 0 0 1rem #0ef;
+}
+
+.back-icon a i {
+    font-size: 2.4rem;
+    color: #000;
+}
+
+.back-icon {
+    text-align: center;
+}
+
+
+
+
+/* skills */
+
+.skills-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 70vh;
+    padding: 50px;
+    background-color: var(--send-bf-color);
+
+
+}
+
+.Skills h2 {
+    margin-bottom: 5rem;
+}
+
+
+
+.skills-headline {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+
+
+/* Technical Skills */
+.technical-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info {
+    font-weight: 600;
+}
+
+.progress-line {
+    background-color: #121212;
+    height: 6px;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-line span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.professional-bar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Radial Bar Styling */
+.radial-bars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+svg {
+    width: 120px;
+    height: 120px;
+    transform: rotate(-90deg);
+}
+
+.progress-bar {
+    fill: none;
+    stroke: #2a2a2a;
+    stroke-width: 15;
+}
+
+.path {
+    fill: none;
+    stroke: #00ffff;
+    stroke-width: 15;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.radial-bars:nth-child(1) .path {
+    stroke-dashoffset: calc(502 - (502 * 90) / 100);
+}
+
+.radial-bars:nth-child(2) .path {
+    stroke-dashoffset: calc(502 - (502 * 80) / 100);
+}
+
+.radial-bars:nth-child(3) .path {
+    stroke-dashoffset: calc(502 - (502 * 85) / 100);
+}
+
+.radial-bars:nth-child(4) .path {
+    stroke-dashoffset: calc(502 - (502 * 90) / 100);
+}
+
+.percentage {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    color: #00ffff;
+    text-align: center;
+}
+
+.text {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+/* Technical Skills Progress Bar Styling */
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.progress-line {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #2a2a2a;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-line span {
+    display: block;
+    height: 100%;
+    position: relative;
+    background: #00ffff;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 5px;
+    color: #000;
+}
+
+.progress-line.html span {
+    width: 100%;
+}
+
+.progress-line.css span {
+    width: 100%;
+}
+
+.progress-line.javascript span {
+    width: 90%;
+}
+
+.progress-line.react span {
+    width: 80%;
+}
+
+.progress-line.node span {
+    width: 90%;
+}
+
+.progress-line.express span {
+    width: 90%;
+}
+
+.progress-line.mongoDB span {
+    width: 95%;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .technical-bars,
+    .professional-bar {
+        max-width: 100%;
+    }
+
+    .professional-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .other-about {
+        display: block;
+
+    }
+}
