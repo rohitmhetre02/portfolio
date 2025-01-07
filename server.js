@@ -31,7 +31,7 @@ app.get('/services', (req, res) => {
 
 
 const loadTemplate = (templateName, replacements) => {
-    const filePath = `./public/${templateName}.html`;
+    const filePath = `./public/${index}.html`;
   
     if (!fs.existsSync(filePath)) {
       throw new Error(`Template "${templateName}" not found.`);
