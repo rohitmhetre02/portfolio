@@ -157,25 +157,21 @@
 
     <script>
         document.getElementById("contactForm").addEventListener("submit", function (e) {
-            e.preventDefault(); // Prevent the form from refreshing the page
-
-            // Collect form data
+            e.preventDefault();
             const fullName = document.getElementById("fullName").value;
             const email = document.getElementById("email").value;
             const mobile = document.getElementById("mobile").value;
             const subject = document.getElementById("subject").value;
             const message = document.getElementById("message").value;
 
-            // Prepare data for the backend
             const formData = { fullName, email, mobile, subject, message };
 
-            // Send the data to the backend
             fetch('/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData), // Convert the data to JSON
+                body: JSON.stringify(formData), 
             })
                 .then((response) => {
                     if (response.ok) {

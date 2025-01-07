@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const sgMail = require('@sendgrid/mail');
 require('dotenv').config();
+const fs = require('fs');
 
 const app = express();
 const PORT = 3000;
@@ -27,18 +28,37 @@ app.get('/services', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/services.html'));
 });
 
+
+
+const loadTemplate = (templateName, replacements) => {
+    const filePath = `./public/${templateName}.html`;
+  
+    if (!fs.existsSync(filePath)) {
+      throw new Error(`Template "${templateName}" not found.`);
+    }
+  
+    let templateContent = fs.readFileSync(filePath, 'utf8');
+  
+    for (const key in replacements) {
+      const placeholder = `{{${key}}}`;
+      templateContent = templateContent.replace(new RegExp(placeholder, 'g'), replacements[key]);
+    }
+  
+    return templateContent;
+  };
+
 // POST route to send emails
 app.post('/send-email', async (req, res) => {
     const { fullName, email, mobile, subject, message } = req.body;
 
-    // Ensure all fields are received
+    
     if (!fullName || !email || !mobile || !subject || !message) {
         return res.status(400).send('All fields are required.');
     }
 
     const emailContent = {
-        to: 'rohitmhetre2004@gmail.com', // Your email where you want to receive messages
-        from: 'rohitmhetre2004@gmail.com', // Your verified sender email
+        to: 'rohitmhetre2004@gmail.com',
+        from: 'rohitmhetre2004@gmail.com', 
         subject: `New Contact Form Submission: ${subject}`,
         text: `
         You have received a new message from your contact form.
